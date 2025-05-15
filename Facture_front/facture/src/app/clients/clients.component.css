@@ -1,0 +1,49 @@
+
+  /* Hover effect for the header */
+.hover-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #ffd700;
+  }
+  
+
+  
+  /* Title styling */
+  .client-title {
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    color: #ffd700;
+  }
+  .client-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: #ffffff;
+    color: #ffd700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  
+  /* Make sure hover effect applies on the title as well */
+
+  .yellow-button {
+    background-color: #FFD700 !important;
+  }
+  .yellow-button:hover {
+    background-color: #FFC107 !important;
+  }

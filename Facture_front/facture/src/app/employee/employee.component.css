@@ -1,0 +1,35 @@
+::ng-deep .mat-header-cell {
+  background-color: #252437 !important;
+  color: white !important;
+}
+
+.employee-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: #ffffff; 
+  color: #ffd700;            
+}
+.yellow-button {
+  background-color: #FFD700 !important;
+}
+.yellow-button:hover {
+  background-color: #FFC107 !important; /* Une teinte légèrement plus foncée pour le survol */
+}
+
+
+
+
+.employee-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  color: #ffd700; 
+}
+

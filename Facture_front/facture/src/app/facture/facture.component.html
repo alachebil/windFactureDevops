@@ -1,0 +1,35 @@
+<!-- parent.component.html -->
+<div class="a4-layout">
+  
+  <div #a4Page class="a4-page">
+    <div class="page-content">
+      <app-logo [containerRef]="mainContent" [boundaryElement]="a4Page" (openOptions)="onOpenOptions($event)" ></app-logo>
+
+      <app-table [containerRef]="mainContent" [boundaryElement]="a4Page" (openOptions)="onOpenOptions($event)"></app-table>
+      <app-calendar [boundaryElement]="a4Page" (openOptions)="onOpenOptions($event)"></app-calendar>
+      <app-info-company [boundaryElement]="a4Page" (openOptions)="onOpenOptions($event)"></app-info-company>
+      <app-info-client [boundaryElement]="a4Page" (openOptions)="onOpenOptions($event)"></app-info-client>
+      <app-footer [containerRef]="mainContent" [boundaryElement]="a4Page" (openOptions)="onOpenOptions($event)"></app-footer>
+    </div>
+  </div>
+
+  <div class="options-wrapper" [class.open]="showOptions">
+    <app-options 
+      [activeComponent]="activeComponent"
+      (stylesUpdated)="onStylesUpdated($event)">
+    </app-options>  </div>
+
+  <button class="save-btn bg-amber-300 text-white py-2 px-4 rounded-sm" matTooltip="Sauvegarder le modèle"
+    aria-label="Save model"
+    (click)="saveModeleFacture()" >
+    <mat-icon>save</mat-icon>
+    <span class="btn-text">Sauvegarder</span>
+    
+  </button>
+
+  <button class="toggle-options-btn" (click)="toggleOptions()" matTooltip="Afficher/Masquer les options"
+    matTooltipPosition="left" aria-label="Toggle options panel">
+    <mat-icon>settings</mat-icon>
+    <span class="btn-text">Options</span>
+  </button>
+</div>  

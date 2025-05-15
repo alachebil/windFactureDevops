@@ -1,0 +1,119 @@
+<div
+  #tableContainer
+  class="table-container"
+  cdkDrag
+  [cdkDragBoundary]="boundaryElement || '.page-content'"
+  (cdkDragEnded)="onDragEnd($event)"
+  (click)="openOptionsPanel()"
+  [style.left.px]="x"
+  [style.top.px]="y"
+>
+  <div class="relative">
+    <div class="overflow-x-auto rounded-lg border border-gray-200 shadow-sm">
+      <table class="min-w-full divide-y">
+        <thead class="table-header" [style.background-color]="backgroundColor">
+          <tr>
+            <th class="px-4 py-3 text-left font-medium text-gray-800 tracking-wider">Réf</th>
+            <th class="px-4 py-3 text-left font-medium text-gray-800 tracking-wider">TVA (%)</th>
+            <th class="px-4 py-3 text-left font-medium text-gray-800 tracking-wider">Remise (%)</th>
+            <th class="px-4 py-3 text-left font-medium text-gray-800 tracking-wider">Quantité</th>
+            <th class="px-4 py-3 text-left font-medium text-gray-800 tracking-wider">Prix Unitaire</th>
+            <th class="px-4 py-3 text-left font-medium text-gray-800 tracking-wider">Total</th>
+            <th class="px-4 py-3 text-left font-medium text-gray-800 tracking-wider"></th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr
+            *ngFor="let item of items; let i = index"
+            class="hover:bg-gray-50 transition-colors duration-150"
+            (mouseenter)="hoveredIndex = i"
+            (mouseleave)="hoveredIndex = null"
+          >
+            <td class="px-4 py-3 whitespace-nowrap">
+              <input
+                type="text"
+                [(ngModel)]="item.ref"
+                placeholder="Référence"
+                class="w-full px-2 py-1 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none"
+              />
+            </td>
+            <td class="px-4 py-3 whitespace-nowrap">
+              <input
+                type="number"
+                [(ngModel)]="item.tva"
+                min="0"
+                step="0.1"
+                class="w-full px-2 py-1 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none"
+              />
+            </td>
+            <td class="px-4 py-3 whitespace-nowrap">
+              <input
+                type="number"
+                [(ngModel)]="item.remise"
+                min="0"
+                max="100"
+                step="0.1"
+                class="w-full px-2 py-1 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none"
+              />
+            </td>
+            <td class="px-4 py-3 whitespace-nowrap">
+              <input
+                type="number"
+                [(ngModel)]="item.quantity"
+                min="1"
+                step="1"
+                class="w-full px-2 py-1 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none"
+              />
+            </td>
+            <td class="px-4 py-3 whitespace-nowrap">
+              <input
+                type="number"
+                [(ngModel)]="item.price"
+                min="0"
+                step="0.01"
+                class="w-full px-2 py-1 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none"
+              />
+            </td>
+            <td class="px-4 py-3 whitespace-nowrap font-medium text-gray-900 text-sm line-total">
+              {{ (item.quantity * item.price * (1 - item.remise / 100) * (1 + item.tva / 100)).toFixed(2) }} dt
+            </td>
+            <td class="px-4 py-3 whitespace-nowrap">
+              <button
+                *ngIf="hoveredIndex === i && items.length > 1"
+                (click)="removeItem(i)"
+                class="text-red-600 hover:text-red-800 remove-item-button"
+              >
+                Remove
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-4 flex justify-between items-center">
+      <button
+        (click)="addItem()"
+        class="inline-flex items-center px-3 py-1.5 border border-transparent font-medium rounded-md shadow-sm text-black bg-[#FFD700] hover:bg-amber-400 transition-colors duration-150 add-item-button"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-4 w-4 mr-1"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z"
+            clip-rule="evenodd"
+          />
+        </svg>
+        Ajouter une ligne
+      </button>
+
+      <div class="text-base font-semibold text-gray-900"></div>
+    </div>
+  </div>
+</div>
+
+

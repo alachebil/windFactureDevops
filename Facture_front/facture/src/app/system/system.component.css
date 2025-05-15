@@ -1,0 +1,242 @@
+/* Container style for responsiveness */
+.container {
+  display: flex;
+  flex-direction: column;  
+  box-sizing: border-box;
+}
+
+/* Status icons */
+mat-icon[color="primary"] {
+  color: #4CAF50 !important; /* Vert pour validé */
+  transform: scale(1.2);
+}
+
+mat-icon[color="warn"] {
+  color: #F44336 !important; /* Rouge pour en attente */
+}
+
+/* Animation pour l'icône de statut */
+mat-icon {
+  transition: all 0.3s ease;
+}
+
+/* Disable validate button for already validated partners */
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.sidebar.collapsed ~ .content {
+  margin-left: 60px;
+  width: calc(100% - 60px);
+}
+
+.menu-item.active {
+  background-color: yellow;
+  color: black;
+}
+
+/* Title of the table */
+.table-title {
+  font-size: 28px;
+  font-weight: 600;
+  background: linear-gradient(to right, #FFD700, #ffcc00);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: left;
+  margin-bottom: 20px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+  line-height: 1.4;
+}
+
+/* Hover effect for the title */
+
+
+/* Table container */
+.table-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Full width table */
+.full-width-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+}
+
+/* Table headers */
+th.mat-header-cell {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  font-weight: 500;
+  text-align: left;
+  padding: 12px;
+  color: white;
+  border-bottom: 2px solid #ddd;
+}
+
+/* Hover effect for table headers */
+th.mat-header-cell:hover {
+  background: linear-gradient(to right, #2575fc, #6a11cb);
+  cursor: pointer;
+}
+
+/* Table cells */
+td.mat-cell {
+  padding: 8px 12px;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+/* Paginator */
+mat-paginator {
+  margin-top: 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Action buttons */
+.action-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+/* Hover effect for action buttons */
+.action-buttons button:hover {
+  transform: scale(1.1);
+}
+
+/* Empty table message */
+.empty-table-message {
+  text-align: center;
+  font-size: 18px;
+  color: #6b6969;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .container {
+    margin-left: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .table-title {
+    font-size: 24px;
+    padding: 10px;
+  }
+
+  .table-container {
+    padding: 10px;
+  }
+
+  th.mat-header-cell,
+  td.mat-cell {
+    padding: 8px;
+  }
+
+  mat-paginator {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .table-title {
+    font-size: 22px;
+    padding: 10px;
+  }
+
+  .table-container {
+    padding: 10px;
+  }
+
+  th.mat-header-cell,
+  td.mat-cell {
+    padding: 8px;
+  }
+
+  mat-paginator {
+    padding: 10px;
+  }
+
+  /* Adjust table layout */
+  .full-width-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  th.mat-header-cell,
+  td.mat-cell {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .table-title {
+    font-size: 20px;
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  /* Adjust cells for very small screens */
+  td.mat-cell {
+    padding: 6px;
+    font-size: 14px;
+  }
+
+  th.mat-header-cell {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  /* Hide certain columns if necessary */
+  .mat-column-email,
+  .mat-column-companyName {
+    display: none;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+.partners-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 16px 24px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #ffd700;
+}
+
+.partners-title {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  color: #ffd700;
+}

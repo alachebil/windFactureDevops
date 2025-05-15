@@ -1,0 +1,164 @@
+/* --- Sidebar container --- */
+.sidebar {
+  width: 200px;
+  height: 100vh;
+  background: #252437;
+  color: #FFD700;
+  padding: 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease-in-out;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+/* Collapsed state */
+.sidebar.collapsed {
+  width: 60px;
+  padding: 10px;
+}
+
+/* Logo styling */
+.logo img {
+  margin-top: -50px;
+  width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  /* margin-bottom: 30px; */
+  /* margin-top: 20px; */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* --- Menu styling --- */
+.menu {
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 10px;
+  background: rgba(255, 215, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.menu-item:hover {
+  background: linear-gradient(90deg, #FFD700, #ffcc00);
+  color: #1a1a1a;
+  transform: translateX(10px);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.menu-item.active {
+  background: linear-gradient(90deg, #FFD700, #ffcc00);
+  color: #000 !important;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Collapsed menu items */
+.sidebar.collapsed .menu-item {
+  justify-content: center;
+  padding: 10px;
+}
+
+.sidebar.collapsed .menu-item:hover {
+  transform: none;
+}
+
+/* --- Icons --- */
+mat-icon {
+  font-size: 20px;
+  margin-right: 15px;
+  color: inherit;
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.collapsed mat-icon {
+  margin-right: 0;
+}
+
+/* --- Submenu styling --- */
+.submenu-items {
+  width: 100%;
+  padding-left: 20px; /* Indentation for submenu items */
+  background: rgba(37, 36, 55, 0.9);
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+  list-style-type: none;
+  padding: 0;
+}
+
+/* --- Submenu item styling --- */
+.submenu-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 10px;
+  background: rgba(255, 215, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+}
+
+.submenu-item:hover {
+  background: linear-gradient(90deg, #FFD700, #ffcc00);
+  color: #1a1a1a;
+  transform: translateX(10px);
+  box-shadow: 0 4px 15px rgba(255, 215, 0, 0.4);
+}
+
+.submenu-item.active {
+  background: linear-gradient(90deg, #FFD700, #ffcc00);
+  color: #000 !important;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* --- Submenu item icon styling --- */
+.submenu-item mat-icon {
+  font-size: 18px;
+  margin-right: 10px;
+  color: inherit;
+}
+
+/* --- Show submenu when active --- */
+.menu-item.active .submenu-items,
+.submenu-items.show {
+  max-height: 500px;
+}
+
+/* --- Responsive design for submenu items --- */
+@media (max-width: 768px) {
+  /* Adjust submenu items to align with the parent items */
+  .submenu-item {
+    padding: 10px;
+  }
+
+  .submenu-items {
+    padding-left: 15px; /* Align submenu items with the parent */
+  }
+
+  .submenu-item:hover {
+    background: rgba(255, 215, 0, 0.2);
+    transform: translateX(5px);
+  }
+}

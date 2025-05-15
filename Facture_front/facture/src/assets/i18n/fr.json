@@ -1,0 +1,137 @@
+{
+  "WELCOME": "Bienvenue à,",
+  "LOGIN_PROMPT": "Connectez-vous pour accéder à votre compte",
+  "EMAIL": "Adresse e-mail",
+  "PASSWORD": "Mot de passe",
+  "FORGOT_PASSWORD": "Mot de passe oublié ?",
+  "ERROR_MESSAGE": "Une erreur s'est produite. Veuillez réessayer.",
+  "LOGIN": "Connexion",
+  "SIGN_UP": "Pas encore de compte ? Inscrivez-vous",
+  "welcome": "Bienvenue,",
+  "description": "Il ne faut que quelques secondes pour créer votre compte",
+  "few_seconds": "quelques secondes",
+  "create_account": "pour créer votre compte",
+  "step1": "Étape 1 : Informations personnelles",
+  "firstName": "Prénom",
+  "lastName": "Nom de famille",
+  "email": "Adresse e-mail",
+  "phone": "Numéro de téléphone",
+  "password": "Mot de passe",
+  "next": "Suivant",
+  "alreadyHaveAccount": "Vous avez déjà un compte ?",
+  "login_here": "Connectez-vous ici",
+  "step2Title": "Étape 2 : Informations sur l'entreprise",
+  "companyName": "Nom de l'entreprise",
+  "companyAddress": "Adresse de l'entreprise",
+  "companyType": "Type d'entreprise",
+  "companyTypeOptions": {
+    "sarl": "SARL",
+    "sas": "SAS",
+    "eirl": "EIRL"
+  },
+  "companyLogo": "Logo de l'entreprise",
+  "previous": "Précédent",
+  "createAccount": "Créer un compte",
+  "errorMessage": "Une erreur s'est produite. Veuillez réessayer.",
+  "firstName_error": "Le prénom est requis",
+  "lastName_error": "Le nom de famille est requis",
+  "email_error": "L'adresse e-mail est invalide",
+  "phone_error": "Le numéro de téléphone est invalide",
+  "password_error": "Le mot de passe est requis",
+  "companyName_error": "Le nom de l'entreprise est requis",
+  "companyAddress_error": "L'adresse de l'entreprise est requise",
+  "companyType_error": "Le type d'entreprise est requis",
+  "logo_error": "Le logo de l'entreprise est requis",
+  "Partners List":"Liste des Partenaires",
+  "Name":"Nom",
+  "Status":"Statu",
+  "Actions":"Actes",
+  "It's a good day to simplify your invoicing!":"C'est un bon jour pour simplifier votre facturation!",
+  "Hello":"Bonjour",
+  "Create my first invoice":"Créez votre première facture",
+  "Transform your management with ease":"Transformez votre gestion avec facilité",
+  "New Invoice":"Nouvelle facture",
+  "No partner to validate":"Aucun partenaire pour valider",
+  "Customize your invoice":"Personnalisez votre facture",
+ 
+  
+    "MENU": {
+      "HOME": "Accueil",
+      "DASHBOARD": "Tableau de bord",
+      "Modele": "Modele  ",
+      "SERVICE": "Service",
+      "LOGOUT": "Se Déconnecter",
+      "SETTINGS": "Paramètres",
+      "Partners":"Partenaires",
+      "Employé":"Employé",
+      "Client":"Client",
+      "SERVICES": "Services",
+      "models_list":"Liste des Modeles"
+    },
+    "or click to select files": "ou cliquez pour sélectionner les fichiers",
+    "employee":{
+    "List of Employees":"Liste des Employés",
+    "Name":"Nom",
+    "Second Name":"Prénom",
+    "Email":"EMAIL",
+    "Phone":"telephone",
+    "Actions":"Actes",
+    "Add Employee":"Ajouter un Employé",
+    "Department":"Departement",
+    "Job":"Poste"
+
+    },
+    "SERVICES_PAGE": {
+      "TITLE": "Liste des Services",
+      "create_service": "Ajouter un Service",
+      "REFERENCE": "Référence",
+      "SERVICE_NAME": "Nom du Service",
+      "QUANTITY": "Quantité",
+      "PRICE": "Prix",
+      "ACTIONS": "Actions",
+      "EDIT_TOOLTIP": "Modifier",
+      "DELETE_TOOLTIP": "Supprimer",
+      "NO_SERVICES": "Aucun service trouvé"
+    },
+    "TOOLBAR": {
+      "SEARCH_PLACEHOLDER": "Rechercher...",
+      "CREATE_INVOICE": "Créer Facture",
+      "CREATE_EMPLOYEE": "Créer Employé",
+      "CREATE_CLIENT": "Créer Client",
+      "CREATE_SERVICE": "Créer Service",
+      "CREATE_TEMPLATE": "Créer Modèle"
+    },
+    "CLIENTS_PAGE": {
+      "TITLE": "Liste des Clients",
+      "CLIENT_NAME": "Nom du Client",
+      "PHONE": "Téléphone",
+      "ADDRESS": "Adresse",
+      "RIB": "RIB",
+      "ACTIONS": "Actions",
+      "EDIT_TOOLTIP": "Modifier",
+      "DELETE_TOOLTIP": "Supprimer",
+      "NO_CLIENTS": "Aucun client trouvé",
+      "PAGINATOR_LABEL": "Sélectionner la page des clients"
+    },
+    "INVOICE_TEMPLATES": {
+      "TITLE": "Modèles de facture",
+      "NO_TEMPLATES": {
+        "TITLE": "Aucun modèle disponible",
+        "DESCRIPTION": "Commencez dès maintenant en créant votre premier modèle !",
+        "BUTTON": "Commencer"
+      },
+      "CARD": {
+        "UNTITLED": "Modèle sans nom",
+        "CREATED_ON": "Créé le:",
+        "SECTIONS": "sections",
+        "PREVIEW": "Prévisualiser",
+        "DELETE": "Effacer ce modèle"
+
+      }
+    } 
+  
+  
+  
+
+
+}

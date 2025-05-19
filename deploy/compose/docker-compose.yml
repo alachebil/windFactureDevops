@@ -5,6 +5,11 @@ services:
   postgres:
     image: postgres:15
     container_name: postgres
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     environment:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
@@ -39,8 +44,10 @@ services:
     image: 192.168.1.192:8082/auth-service:latest
     container_name: auth-service
     depends_on:
-      - postgres
-      - discovery
+      postgres:
+        condition: service_healthy
+      discovery:
+        condition: service_started
     ports:
       - "8090:8090"
     environment:
@@ -58,8 +65,10 @@ services:
     image: 192.168.1.192:8082/client-service:latest
     container_name: client-service
     depends_on:
-      - postgres
-      - discovery
+      postgres:
+        condition: service_healthy
+      discovery:
+        condition: service_started
     ports:
       - "8092:8092"
     environment:
@@ -74,8 +83,10 @@ services:
     image: 192.168.1.192:8082/facture:latest
     container_name: facture
     depends_on:
-      - postgres
-      - discovery
+      postgres:
+        condition: service_healthy
+      discovery:
+        condition: service_started
     ports:
       - "8094:8094"
     environment:
@@ -90,8 +101,10 @@ services:
     image: 192.168.1.192:8082/services-ser:latest
     container_name: services-ser
     depends_on:
-      - postgres
-      - discovery
+      postgres:
+        condition: service_healthy
+      discovery:
+        condition: service_started
     ports:
       - "8093:8093"
     environment:

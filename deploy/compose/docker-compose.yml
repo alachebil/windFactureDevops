@@ -123,7 +123,7 @@ services:
     image: 192.168.1.192:8082/angular-frontend:latest
     container_name: angular-frontend
     ports:
-      - "80:80"
+      - "4200:80"
     depends_on:
       - auth-service
       - facture

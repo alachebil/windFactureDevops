@@ -2,7 +2,7 @@
 FROM node:18 AS builder
 WORKDIR /app
 COPY . .
-RUN npm install
+RUN npm install --force
 RUN npm run build -- --configuration production
 
 # Étape 2 - Serveur nginx

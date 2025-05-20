@@ -4,6 +4,9 @@ import { AuthService } from './AuthService';
 import { AuthGuard } from './auth.guard';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { MatDialogRef } from '@angular/material/dialog';
+
 
 describe('AuthGuard', () => {
   let guard: AuthGuard;
@@ -20,7 +23,10 @@ describe('AuthGuard', () => {
     };
 
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
+       imports: [
+        HttpClientTestingModule,  // <-- Ajoute ceci pour fournir HttpClient
+        RouterTestingModule       // <-- Souvent nécessaire pour les tests de garde avec routing
+      ],
       providers: [
         AuthGuard,
         { provide: AuthService, useValue: authServiceMock },

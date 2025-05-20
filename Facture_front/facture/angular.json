@@ -41,8 +41,8 @@
   "src/custom-theme.scss",
   "src/styles.css"
 ],
-            "scripts": [],
-            "server": "src/main.server.ts"
+            "scripts": []
+            
           },
           "configurations": {
             "production": {

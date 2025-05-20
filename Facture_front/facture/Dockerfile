@@ -16,6 +16,8 @@ RUN ls -la /app/dist/facture  # Debug: Verify build output
 
 # Étape 2 - Serveur nginx
 FROM nginx:alpine
-COPY --from=builder /app/dist/facture/ /usr/share/nginx/html/
+RUN ls -la /app/dist/facture/browser
+COPY --from=builder /app/dist/facture/browser/ /usr/share/nginx/html/
+
 COPY nginx.conf /etc/nginx/nginx.conf
 RUN ls -la /usr/share/nginx/html  # Debug: Verify copied files

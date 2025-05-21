@@ -12,7 +12,7 @@ RUN sed -i "s|<%= ENV.API_URLS_FACTURE %>|$API_URLS_FACTURE|g" src/index.html
 RUN sed -i "s|<%= ENV.API_URLS_CLIENT %>|$API_URLS_CLIENT|g" src/index.html
 RUN sed -i "s|<%= ENV.API_URLS_SERVICES %>|$API_URLS_SERVICES|g" src/index.html
 RUN npm run build -- --configuration production || { echo "Build failed"; cat /app/npm-debug.log || true; exit 1; }
-RUN ls -la /app/dist/facture  # Debug: Verify build output
+
 
 # Étape 2 - Serveur nginx
 FROM nginx:alpine

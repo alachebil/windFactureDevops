@@ -52,7 +52,10 @@ eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
+    service-url:
+      defaultZone: http://discovery:8761/eureka/
   instance:
     prefer-ip-address: true
+
 jwt:
   secret: Uanh9hcdF+I0eHVxK4AhoYrk3jwIfIkQecufRfV3EeJATNtw9+aFpDqhL4DJvulo

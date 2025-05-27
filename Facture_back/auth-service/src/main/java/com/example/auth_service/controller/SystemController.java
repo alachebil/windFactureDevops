@@ -21,6 +21,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 @RestController
 @RequestMapping("/system")
 @PreAuthorize("hasAuthority('ROLE_System')")
+@CrossOrigin(origins= "*")
 public class SystemController {
 
     private final SystemService systemService;

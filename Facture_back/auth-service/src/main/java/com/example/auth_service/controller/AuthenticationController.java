@@ -21,7 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 @RequestMapping("public")
 @RequiredArgsConstructor
 @Slf4j
-
+@CrossOrigin(origins= "*")
 public class AuthenticationController {
 
     private final AuthenticationService authenticationService;

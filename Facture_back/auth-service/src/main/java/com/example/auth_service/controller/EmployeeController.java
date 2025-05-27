@@ -19,6 +19,7 @@ import jakarta.validation.Valid;
 @SecurityRequirement(name = "BearerAuth")
 @PreAuthorize("hasAuthority('ROLE_PARTNER')")
 @RequiredArgsConstructor
+@CrossOrigin(origins= "*")
 public class EmployeeController {
 
     private final EmployeeService employeeService;

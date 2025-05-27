@@ -48,7 +48,7 @@ public class SecurityConfig implements WebMvcConfigurer {
         registry.addMapping("/**")
             .allowedOrigins("http://localhost:4200")
             .allowedMethods("GET", "POST", "PUT", "DELETE")
-            .allowedHeaders("Content-Type", "Authorization")
+            .allowedHeaders("Content-Type", "Authorization").allowedOrigins("*")
             .allowCredentials(true);
     }
 }

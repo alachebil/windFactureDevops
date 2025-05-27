@@ -1,9 +1,9 @@
 export const environment = {
   production: false,
   apiUrls: {
-    authService: 'http://localhost:8090/api',
-    factureService: 'http://localhost:8094/api',
-    clientService: 'http://localhost:8092/api',
-    servicesSer: 'http://localhost:8093/api'
+    authService: 'http://192.168.1.172:8090/api',
+    factureService: 'http://192.168.1.172:8094/api',
+    clientService: 'http://192.168.1.172:8092/api',
+    servicesSer: 'http://192.168.1.172:8093/api'
   }
 };

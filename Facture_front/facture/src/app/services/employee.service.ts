@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class EmployeeService {
   constructor(private http: HttpClient) { }
-  private apiUrl = 'http://localhost:8090/employees'; // Changed from /employee to /employees
+  private apiUrl = 'http://192.168.1.172:8090/employees'; // Changed from /employee to /employees
 
   private createHeaders(): HttpHeaders {
     let headers = new HttpHeaders({

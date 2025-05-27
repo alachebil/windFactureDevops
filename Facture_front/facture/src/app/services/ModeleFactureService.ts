@@ -10,7 +10,7 @@ import { ModeleFacture } from '../models/modele-facture.model';
     providedIn: 'root'
 })
 export class ModeleFactureService {
-    private apiUrl = 'http://localhost:8094/api/modele-facture';
+    private apiUrl = 'http://192.168.1.172:8094/api/modele-facture';
 
     constructor(private http: HttpClient) {}
 

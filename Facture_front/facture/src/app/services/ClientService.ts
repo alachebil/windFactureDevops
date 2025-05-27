@@ -8,7 +8,7 @@ import { Client } from '../models/Client';
   providedIn: 'root'
 })
 export class ClientService {
-  private readonly apiUrl = 'http://localhost:8092/clients';
+  private readonly apiUrl = 'http://192.168.1.172:8092/clients';
 
   constructor(private http: HttpClient) {}
 

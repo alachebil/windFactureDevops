@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:8090/public'; 
+  private apiUrl = 'http://192.168.1.172:8090/public'; 
   private logo: File | null = null; // Add this line
 
 
